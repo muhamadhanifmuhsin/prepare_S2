@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="416.0" prefWidth="658.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXMLDocumentController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <VBox prefHeight="200.0" prefWidth="420.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label text="NPSN">
+               <padding>
+                  <Insets left="7.0" top="7.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="tnpsn" />
+            <Label text="Nama Sekolah">
+               <padding>
+                  <Insets left="7.0" top="7.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="tnama" />
+            <Label text="Alamat">
+               <padding>
+                  <Insets left="7.0" top="7.0" />
+               </padding>
+            </Label>
+            <TextArea fx:id="txaAlamat" prefHeight="200.0" prefWidth="200.0" />
+            <Label text="Kab/Kota">
+               <padding>
+                  <Insets left="7.0" top="7.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="tKab_Kota" />
+            <Label text="Gugus">
+               <padding>
+                  <Insets left="7.0" top="7.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="tGugus" />
+            <HBox prefHeight="36.0" prefWidth="443.0">
+               <children>
+                  <Button fx:id="bSave" mnemonicParsing="false" text="Save">
+                     <HBox.margin>
+                        <Insets left="7.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="bUpdate" mnemonicParsing="false" text="Update">
+                     <HBox.margin>
+                        <Insets left="7.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="bDelete" mnemonicParsing="false" text="Delete">
+                     <HBox.margin>
+                        <Insets left="7.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="bClear" mnemonicParsing="false" text="Clear Field">
+                     <HBox.margin>
+                        <Insets left="7.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets top="7.0" />
+               </padding>
+            </HBox>
+            <TableView fx:id="tv" prefHeight="223.0" prefWidth="658.0" tableMenuButtonVisible="true">
+              <columns>
+                  <TableColumn fx:id="id" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="npsn" prefWidth="75.0" text="NPSN" />
+                <TableColumn fx:id="nama" prefWidth="75.0" text="Nama Sekolah" />
+                  <TableColumn fx:id="gugus" prefWidth="75.0" text="Gugus" />
+                  <TableColumn fx:id="kab_kota" prefWidth="75.0" text="Kab/Kota" />
+              </columns>
+               <VBox.margin>
+                  <Insets top="7.0" />
+               </VBox.margin>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <TextField fx:id="tCari">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </TextField>
+         </children>
+      </VBox>
+    </children>
+</AnchorPane>
